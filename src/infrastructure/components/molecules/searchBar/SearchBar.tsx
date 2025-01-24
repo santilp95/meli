@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 
-import { IconProduct, SearchInput, ShortButton } from "../../atoms";
+import { BarInput, IconProduct, ShortButton } from "../../atoms";
 
 import styles from "./searchBar.module.css";
 
@@ -23,7 +23,7 @@ export const SearchBar: FC<SearchBarProps> = ({
             className={styles.searchBar}
         >
             <IconProduct />
-            <SearchInput
+            <BarInput
                 placeholder={placeholder}
                 value={value}
                 onChange={(e) => onInputChange && onInputChange(e.target.value)}

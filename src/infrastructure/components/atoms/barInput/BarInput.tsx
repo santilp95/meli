@@ -1,9 +1,9 @@
 "use client";
 import { ChangeEvent, FC } from "react";
 
-import styles from "./searchInput.module.css";
+import styles from "./barInput.module.css";
 
-interface SearchInputProps {
+interface BarInputProps {
   /**
    * Placeholder text
    */
@@ -19,16 +19,16 @@ interface SearchInputProps {
 }
 
 /**
- * Search input component
+ * Bar input component
  */
-export const SearchInput: FC<SearchInputProps> = ({
+export const BarInput: FC<BarInputProps> = ({
   placeholder,
   value,
   onChange,
 }) => {
   return (
     <input
-      className={styles.searchInput}
+      className={styles.barInput}
       onChange={onChange}
       placeholder={placeholder ?? "Nunca dejes de buscar"}
       type="text"

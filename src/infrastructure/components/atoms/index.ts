@@ -1,3 +1,3 @@
 export { IconProduct } from "./iconProduct/IconProduct";
-export { SearchInput } from "./searchInput/SearchInput";
+export { BarInput  } from "./barInput/BarInput";
 export { ShortButton } from "./shortButton/ShortButton";
