@@ -5,7 +5,7 @@
   align-items: flex-start;
   background-color: #ffffff;
   border: 1px solid #eeeeee;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 16px;
   gap: 16px;
   width: 100%;
@@ -27,7 +27,7 @@
 .priceContainer {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 10px;
 }
 
 .detailContainer {
