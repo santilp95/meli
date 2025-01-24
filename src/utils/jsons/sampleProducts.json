@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
         "price": 100,
         "detail": "Product 1",
@@ -9,7 +9,7 @@
         "hasShippingIcon": true
     },
     {
-        "id": 2,
+        "id": "2",
         "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
         "price": 200,
         "detail": "Product 2",
@@ -18,7 +18,7 @@
         "hasShippingIcon": false
     },
     {
-        "id": 3,
+        "id": "3",
         "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
         "price": 300,
         "detail": "Product 3",
@@ -27,7 +27,7 @@
         "hasShippingIcon": true
     },
     {
-        "id": 4,
+        "id": "4",
         "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
         "price": 400,
         "detail": "Product 4",
@@ -36,7 +36,7 @@
         "hasShippingIcon": true
     },
     {
-        "id": 5,
+        "id": "5",
         "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
         "price": 500,
         "detail": "Product 5",

@@ -1,2 +1,2 @@
-import sampleProduct from './jsons/sampleProducts.json';
-export { sampleProduct };
+import sampleProducts from './jsons/sampleProducts.json';
+export { sampleProducts };
