@@ -15,6 +15,7 @@ export const SmallIcon: FC = () => {
             style={{
                 display: "block",
             }}
+            data-testid="shipping-icon"
         />
     );
 };

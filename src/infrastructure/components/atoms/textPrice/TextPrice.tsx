@@ -21,6 +21,7 @@ export const TextPrice: FC<TextPriceProps> = ({ price }) => {
                 fontWeight: "bold",
                 margin: 0,
             }}
+            data-testid="text-price"
         >
             $ {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
         </p>

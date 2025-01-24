@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import { CardProduct } from './ CardProduct';
 
 
@@ -20,9 +21,9 @@ describe('CardProduct', () => {
       expect(imageElement).toHaveAttribute('src', '/path/to/image.jpg');
     });
   
-    it.skip('renders the product price', () => {
-      const { getByText } = render(<CardProduct {...defaultProps} />);
-      const priceElement = getByText('100');
+    it('renders the product price', () => {
+      const { getByTestId } = render(<CardProduct {...defaultProps} />);
+      const priceElement = getByTestId('text-price');
       expect(priceElement).toBeInTheDocument();
     });
   
@@ -38,7 +39,7 @@ describe('CardProduct', () => {
       expect(cityElement).toBeInTheDocument();
     });
   
-    it.skip('renders the shipping icon if hasShippingIcon is true', () => {
+    it('renders the shipping icon if hasShippingIcon is true', () => {
       const { getByTestId } = render(<CardProduct {...defaultProps} />);
       const shippingIconElement = getByTestId('shipping-icon');
       expect(shippingIconElement).toBeInTheDocument();
