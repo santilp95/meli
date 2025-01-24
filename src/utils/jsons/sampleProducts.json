@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
+        "price": 100,
+        "detail": "Product 1",
+        "stateOfTheProduct": "New",
+        "city": "City 1",
+        "hasShippingIcon": true
+    },
+    {
+        "id": 2,
+        "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
+        "price": 200,
+        "detail": "Product 2",
+        "stateOfTheProduct": "Used",
+        "city": "City 2",
+        "hasShippingIcon": false
+    },
+    {
+        "id": 3,
+        "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
+        "price": 300,
+        "detail": "Product 3",
+        "stateOfTheProduct": "Refurbished",
+        "city": "City 3",
+        "hasShippingIcon": true
+    },
+    {
+        "id": 4,
+        "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
+        "price": 400,
+        "detail": "Product 4",
+        "stateOfTheProduct": "New",
+        "city": "City 4",
+        "hasShippingIcon": true
+    },
+    {
+        "id": 5,
+        "image": "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80",
+        "price": 500,
+        "detail": "Product 5",
+        "stateOfTheProduct": "Used",
+        "city": "City 5",
+        "hasShippingIcon": false
+    }
+]
