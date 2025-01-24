@@ -6,7 +6,7 @@ interface ShortButtonProps {
   /**
    * Function to handle the button click
    */
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const icon = "/assets/ic_Search.png";
