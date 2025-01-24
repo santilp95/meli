@@ -51,12 +51,12 @@ export const CardProduct: FC<CardProductProps> = ({
 }) => {
     return (
         <div className={styles.card}>
-            {/* Bloque 1: Imagen del Producto */}
+
             <div className={styles.imageContainer}>
                 <ImageSearch src={image} alt={detail} />
             </div>
 
-            {/* Bloque 2: Información del Producto */}
+
             <div className={styles.infoContainer}>
                 <div className={styles.priceContainer}>
                     <TextPrice price={price} />
@@ -69,7 +69,7 @@ export const CardProduct: FC<CardProductProps> = ({
 
             </div>
 
-            {/* Bloque 3: Ubicación del Producto */}
+
             <div className={styles.cityContainer}>
                 <TextCity text={city} />
             </div>

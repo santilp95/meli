@@ -1,46 +1,47 @@
 /* Contenedor principal */
 .card {
   display: grid;
-  grid-template-columns: auto 1fr auto; /* Imagen, Información, Ciudad */
+  grid-template-columns: auto 1fr auto;
   align-items: flex-start;
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   border-radius: 8px;
   padding: 16px;
-  gap: 16px; /* Espaciado entre los bloques */
+  gap: 16px;
   width: 100%;
 }
 
-/* Bloque 1: Imagen */
+
 .imageContainer {
   flex-shrink: 0; /* Evita que la imagen cambie de tamaño */
 }
 
-/* Bloque 2: Información */
+
 .infoContainer {
   display: flex;
   flex-direction: column;
-  gap: 32px; /* Espaciado vertical entre los elementos */
+  gap: 32px;
 }
 
 .priceContainer {
   display: flex;
   align-items: center;
-  gap: 32px; /* Espaciado horizontal entre el precio y el ícono */
+  gap: 32px;
 }
 
 .detailContainer {
   display: flex;
   flex-direction: column;
-  gap: 0px; /* Elimina el espacio entre los dos textos */
-  margin: 0; /* Asegura que el contenedor no tenga margen adicional */
-  padding: 0; /* Asegura que no haya relleno adicional */
+  gap: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Bloque 3: Ciudad */
+
 .cityContainer {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
   text-align: right;
+  margin-top: 24px;
 }
