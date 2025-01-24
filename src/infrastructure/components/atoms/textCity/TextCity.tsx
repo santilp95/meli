@@ -17,8 +17,8 @@ export const TextCity: FC<TextCityProps> = ({ text }) => {
         <p
             style={{
                 fontSize: "12px",
-                color: "#999999", // Gris claro
-                margin: 0, // Sin márgenes
+                color: "#999999",
+                margin: 0,
             }}
         >
             {text}
