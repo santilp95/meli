@@ -20,12 +20,6 @@
   }
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color:  #ffe600;
-}
 
 .main {
   display: flex;
