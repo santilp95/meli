@@ -19,6 +19,7 @@ export const TextDetail: FC<TextDetailProps> = ({ text }) => {
                 fontSize: "18px",
                 color: "#333333",
                 margin: 0,
+                marginBottom: "16px",
                 fontWeight: "normal",
             }}
         >
