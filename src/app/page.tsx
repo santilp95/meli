@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+
 import { SearchBar } from "@/infrastructure/components";
 
 import styles from "./page.module.css";
@@ -13,13 +14,16 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
+      <header className={styles.header}>
       <SearchBar
         placeholder="Nunca dejes de buscar"
         value={search}
         onInputChange={setSearch}
         onSearch={handleSearch}
       />
+      </header>
+      <main className={styles.main}>
+        <h1>Hello world</h1>
       </main>
     </div>
   );
