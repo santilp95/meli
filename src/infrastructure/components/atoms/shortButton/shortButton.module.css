@@ -1,0 +1,14 @@
+.shortButton{
+    border: none;
+    background-color: #EEEEEE;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    min-width: 36px;
+}
+
+.shortButton img{
+    width: 18px;
+    height: auto;
+    margin-right: 0px!important;
+}

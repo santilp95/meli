@@ -2,6 +2,8 @@
 import { FC } from "react";
 import Image from "next/image";
 
+import styles from "./shortButton.module.css";
+
 interface ShortButtonProps {
   /**
    * Function to handle the button click
@@ -18,7 +20,7 @@ export const ShortButton: FC<ShortButtonProps> = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      style={{ border: "none", background: "none", cursor: "pointer" }}
+      className={styles.shortButton}
     >
       <Image
         src={icon}

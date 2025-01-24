@@ -9,6 +9,8 @@ const logo = "/assets/Logo_ML.png";
  */
 export const IconProduct = () => {
   return (
-    <Image src={logo} alt="Logo" width={40} height={40} />
+    <div>
+      <Image src={logo} alt="Logo" width={40} height={30} />
+    </div>
   )
 }
