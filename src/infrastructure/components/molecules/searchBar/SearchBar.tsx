@@ -1,6 +1,9 @@
 "use client";
 import { FC } from "react";
+
 import { IconProduct, SearchInput, ShortButton } from "../../atoms";
+
+import styles from "./searchBar.module.css";
 
 interface SearchBarProps {
     placeholder?: string;
@@ -17,14 +20,7 @@ export const SearchBar: FC<SearchBarProps> = ({
 }) => {
     return (
         <div
-            style={{
-                display: "flex",
-                alignItems: "center",
-                backgroundColor: "#ffd400",
-                padding: "5px 10px",
-                borderRadius: "5px",
-                width: "100%",
-            }}
+            className={styles.searchBar}
         >
             <IconProduct />
             <SearchInput

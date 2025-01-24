@@ -1,6 +1,8 @@
 "use client";
 import { ChangeEvent, FC } from "react";
 
+import styles from "./searchInput.module.css";
+
 interface SearchInputProps {
   /**
    * Placeholder text
@@ -26,17 +28,11 @@ export const SearchInput: FC<SearchInputProps> = ({
 }) => {
   return (
     <input
-      type="text"
-      value={value}
+      className={styles.searchInput}
       onChange={onChange}
       placeholder={placeholder ?? "Nunca dejes de buscar"}
-      style={{
-        flex: 1,
-        border: "none",
-        padding: "10px",
-        fontSize: "16px",
-        outline: "none",
-      }}
+      type="text"
+      value={value}
     />
   );
 };
