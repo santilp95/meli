@@ -1,28 +1,46 @@
+/* Contenedor principal */
 .card {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Imagen, Información, Ciudad */
   align-items: flex-start;
-  gap: 16px; /* Mantiene el espacio de 16px entre imagen y contenido */
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   border-radius: 8px;
   padding: 16px;
+  gap: 16px; /* Espaciado entre los bloques */
   width: 100%;
-  cursor: pointer;
 }
 
+/* Bloque 1: Imagen */
 .imageContainer {
-  flex-shrink: 0;
+  flex-shrink: 0; /* Evita que la imagen cambie de tamaño */
 }
 
-.info {
+/* Bloque 2: Información */
+.infoContainer {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Espacio entre los elementos internos */
-  flex: 1;
+  gap: 32px; /* Espaciado vertical entre los elementos */
 }
 
 .priceContainer {
   display: flex;
   align-items: center;
-  gap: 32px; /* Incrementa el espacio entre precio e ícono */
+  gap: 32px; /* Espaciado horizontal entre el precio y el ícono */
+}
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Elimina el espacio entre los dos textos */
+  margin: 0; /* Asegura que el contenedor no tenga margen adicional */
+  padding: 0; /* Asegura que no haya relleno adicional */
+}
+
+/* Bloque 3: Ciudad */
+.cityContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: right;
 }

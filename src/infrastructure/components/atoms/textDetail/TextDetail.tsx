@@ -2,10 +2,12 @@
 
 import { FC } from "react";
 
+import style from "./textDetail.module.css";
+
 interface TextDetailProps {
     /**
-    * Text to describe a product
-    */
+     * Text to describe a product
+     */
     text: string;
 }
 
@@ -13,17 +15,5 @@ interface TextDetailProps {
  * Text to describe a product
  */
 export const TextDetail: FC<TextDetailProps> = ({ text }) => {
-    return (
-        <p
-            style={{
-                fontSize: "18px",
-                color: "#333333",
-                margin: 0,
-                marginBottom: "16px",
-                fontWeight: "normal",
-            }}
-        >
-            {text}
-        </p>
-    );
+    return <p className={style.textDetail}>{text}</p>;
 };

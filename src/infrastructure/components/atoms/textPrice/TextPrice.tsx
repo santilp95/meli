@@ -16,7 +16,7 @@ export const TextPrice: FC<TextPriceProps> = ({ price }) => {
     return (
         <p
             style={{
-                fontSize: "18px",
+                fontSize: "24px",
                 color: "#333333",
                 fontWeight: "bold",
                 margin: 0,

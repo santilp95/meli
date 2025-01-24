@@ -14,16 +14,20 @@ import styles from "./CardProduct.module.css";
 interface CardProductProps {
     /**
      * Image of the product
-    */
+     */
     image: string;
     /**
      * Price of the product
-    */
+     */
     price: number;
     /**
      * Detail of the product
-    */
+     */
     detail: string;
+    /**
+     * State of the product
+     */
+    stateOfTheProduct?: string;
     /**
      * City of the product
      */
@@ -42,19 +46,31 @@ export const CardProduct: FC<CardProductProps> = ({
     price,
     detail,
     city,
+    stateOfTheProduct = "Completo unico!",
     hasShippingIcon = false,
 }) => {
     return (
         <div className={styles.card}>
+            {/* Bloque 1: Imagen del Producto */}
             <div className={styles.imageContainer}>
                 <ImageSearch src={image} alt={detail} />
             </div>
-            <div className={styles.info}>
+
+            {/* Bloque 2: Información del Producto */}
+            <div className={styles.infoContainer}>
                 <div className={styles.priceContainer}>
                     <TextPrice price={price} />
                     {hasShippingIcon && <SmallIcon />}
                 </div>
-                <TextDetail text={detail} />
+                <div className={styles.detailContainer}>
+                    <TextDetail text={detail} />
+                    <TextDetail text={stateOfTheProduct} />
+                </div>
+
+            </div>
+
+            {/* Bloque 3: Ubicación del Producto */}
+            <div className={styles.cityContainer}>
                 <TextCity text={city} />
             </div>
         </div>
