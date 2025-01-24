@@ -23,6 +23,7 @@ export const SearchBar: FC<SearchBarProps> = ({
                 backgroundColor: "#ffd400",
                 padding: "5px 10px",
                 borderRadius: "5px",
+                width: "100%",
             }}
         >
             <IconProduct />
