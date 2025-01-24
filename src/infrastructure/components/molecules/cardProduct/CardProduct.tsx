@@ -11,7 +11,7 @@ import {
 
 import styles from "./CardProduct.module.css";
 
-interface CardProductProps {
+export interface CardProductProps {
     /**
      * Image of the product
      */

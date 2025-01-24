@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { CardProduct } from './ CardProduct';
+import { CardProduct } from './CardProduct';
 
 
 
