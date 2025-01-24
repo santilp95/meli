@@ -4,15 +4,15 @@ import { FC } from "react";
 
 interface TextPriceProps {
     /**
-     * Text to describe a product price
+     * Price to describe a product price
      */
-    text: string | number;
+    price: number;
 }
 
 /**
  *  Text to describe a product price
  */
-export const TextPrice: FC<TextPriceProps> = ({ text }) => {
+export const TextPrice: FC<TextPriceProps> = ({ price }) => {
     return (
         <p
             style={{
@@ -22,7 +22,7 @@ export const TextPrice: FC<TextPriceProps> = ({ text }) => {
                 margin: 0,
             }}
         >
-            {text}
+            ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
         </p>
     );
 };

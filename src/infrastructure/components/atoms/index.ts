@@ -5,3 +5,4 @@ export { ShortButton } from "./shortButton/ShortButton";
 export { SmallIcon } from "./smallIcon/SmallIcon";
 export { TextDetail } from "./textDetail/TextDetail";
 export { TextPrice } from "./textPrice/TextPrice";
+export { TextCity } from "./textCity/TextCity";
