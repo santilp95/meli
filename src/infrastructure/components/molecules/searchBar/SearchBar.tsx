@@ -1,23 +1,39 @@
 "use client";
-import { FC } from "react";
+import { FC, useState } from "react";
 
 import { BarInput, IconProduct, ShortButton } from "../../atoms";
 
 import styles from "./searchBar.module.css";
 
 interface SearchBarProps {
+    /**
+     * Placeholder text
+     */
     placeholder?: string;
-    onSearch?: () => void;
-    onInputChange?: (value: string) => void;
-    value?: string;
+    /**
+     * Function to handle the search
+     */
+    onSearch?: (value: string) => void;
 }
 
+/**
+ * Search bar component
+ */
 export const SearchBar: FC<SearchBarProps> = ({
     placeholder,
     onSearch,
-    onInputChange,
-    value,
+
 }) => {
+    const [search, setSearch] = useState("");
+    const handleInputChange = (newValue: string) => {
+        setSearch(newValue);
+    };
+
+    const handleSearch = () => {
+        if (onSearch) {
+            onSearch(search);
+        }
+    };
     return (
         <div
             className={styles.searchBar}
@@ -25,10 +41,10 @@ export const SearchBar: FC<SearchBarProps> = ({
             <IconProduct />
             <BarInput
                 placeholder={placeholder}
-                value={value}
-                onChange={(e) => onInputChange && onInputChange(e.target.value)}
+                value={search}
+                onChange={(e) => handleInputChange(e.target.value)}
             />
-            <ShortButton onClick={onSearch} />
+            <ShortButton onClick={handleSearch} />
         </div>
     );
 };
