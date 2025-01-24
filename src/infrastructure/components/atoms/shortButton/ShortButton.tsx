@@ -23,7 +23,8 @@ export const ShortButton: FC<ShortButtonProps> = ({ onClick }) => {
       <Image
         src={icon}
         alt="Search Icon"
-        style={{ width: "20px", height: "20px" }}
+        width={20}
+        height={20}
       />
     </button>
   );
