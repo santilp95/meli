@@ -5,6 +5,7 @@
     background-color: #ffe600;
     padding: 10px 60px;
     width: 100%;
+    max-width: 1200px;
 }
 
 .searchBar img {

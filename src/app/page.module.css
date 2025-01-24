@@ -22,8 +22,9 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  background-color:  #ffe600;
 }
 
 .main {
