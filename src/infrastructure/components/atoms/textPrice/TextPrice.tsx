@@ -22,7 +22,7 @@ export const TextPrice: FC<TextPriceProps> = ({ price }) => {
                 margin: 0,
             }}
         >
-            ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+            $ {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
         </p>
     );
 };
