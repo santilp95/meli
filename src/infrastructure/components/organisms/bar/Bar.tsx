@@ -26,7 +26,7 @@ export const Bar: FC<BarProps> = ({
                     onSearch={onSearch}
                 />
             </div>
-            <div className="container">
+            <div className="container container-middle">
                 <TextCategories categories={categories} />
             </div>
         </header>

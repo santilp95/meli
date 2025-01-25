@@ -38,6 +38,11 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+}
+
+.container-middle {
+  flex: 0 1 90%;
+  max-width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
