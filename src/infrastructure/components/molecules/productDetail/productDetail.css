@@ -1,0 +1,9 @@
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.product-detail > * {
+  margin-left: 16px;
+}
