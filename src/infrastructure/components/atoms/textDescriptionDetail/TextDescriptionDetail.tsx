@@ -23,11 +23,10 @@ export const TextDescriptionDetail: FC<TextDescriptionDetailProps> = ({
     return (
         <p
             style={{
-                color: "#EEEEEE",
+                color: "#999999",
                 fontSize: "16px",
                 maxWidth,
                 lineHeight: "1.5",
-                margin: 0,
                 width: "100%",
             }}
         >

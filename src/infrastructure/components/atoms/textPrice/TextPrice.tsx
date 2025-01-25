@@ -22,7 +22,6 @@ export const TextPrice: FC<TextPriceProps> = ({ price , fontSize='24px'}) => {
             style={{
                 fontSize,
                 color: "#333333",
-                margin: 0,
             }}
             data-testid="text-price"
         >

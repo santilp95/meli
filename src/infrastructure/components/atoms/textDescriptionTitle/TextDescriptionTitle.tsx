@@ -20,7 +20,6 @@ export const TextDescriptionTitle: FC<TextDescriptionTitleProps> = ({
             style={{
                 color: "#333333",
                 fontSize: "28px",
-                margin: 0,
             }}
         >
             {text}
