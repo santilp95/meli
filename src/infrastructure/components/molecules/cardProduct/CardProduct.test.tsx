@@ -1,6 +1,11 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
+import { useRouter } from 'next/navigation';
 
 import { CardProduct } from './CardProduct';
+
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn(),
+}));
 
 describe('CardProduct', () => {
   const defaultProps = {
@@ -10,6 +15,7 @@ describe('CardProduct', () => {
     city: 'Product city',
     stateOfTheProduct: 'New',
     hasShippingIcon: true,
+    id: '1',
   };
 
   it('renders the product image', () => {
@@ -37,15 +43,14 @@ describe('CardProduct', () => {
     expect(cityElement).toBeInTheDocument();
   });
 
-  it('renders the shipping icon if hasShippingIcon is true', () => {
-    const { getByTestId } = render(<CardProduct {...defaultProps} />);
-    const shippingIconElement = getByTestId('shipping-icon');
-    expect(shippingIconElement).toBeInTheDocument();
-  });
+  it('redirects to the correct route when clicked', () => {
+    const push = jest.fn();
+    (useRouter as jest.Mock).mockReturnValue({ push });
 
-  it('does not render the shipping icon if hasShippingIcon is false', () => {
-    const { queryByTestId } = render(<CardProduct {...defaultProps} hasShippingIcon={false} />);
-    const shippingIconElement = queryByTestId('shipping-icon');
-    expect(shippingIconElement).not.toBeInTheDocument();
+    const { getByRole } = render(<CardProduct {...defaultProps} />);
+    const buttonElement = getByRole('button');
+    fireEvent.click(buttonElement);
+
+    expect(push).toHaveBeenCalledWith('/item/1');
   });
 });

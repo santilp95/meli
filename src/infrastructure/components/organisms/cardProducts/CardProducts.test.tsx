@@ -6,6 +6,10 @@ import { sampleProducts } from "@/utils";
 
 const sampleProductsMock: IProduct[] = sampleProducts;
 
+jest.mock('next/navigation', () => ({
+    useRouter: jest.fn(),
+}));
+
 describe("CardProducts", () => {
     it("renders a list of products", () => {
         const { getByText } = render(

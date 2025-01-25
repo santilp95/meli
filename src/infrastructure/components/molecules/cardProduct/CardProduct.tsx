@@ -1,6 +1,9 @@
 "use client";
 
 import { FC } from "react";
+import { useRouter } from 'next/navigation'
+
+
 import {
     ImageSearch,
     TextPrice,
@@ -36,6 +39,10 @@ export interface CardProductProps {
      * Shipping icon
      */
     hasShippingIcon?: boolean;
+    /**
+     * Product id
+     */
+    id: string;
 }
 
 /**
@@ -48,9 +55,15 @@ export const CardProduct: FC<CardProductProps> = ({
     city,
     stateOfTheProduct = "Completo unico!",
     hasShippingIcon = false,
+    id,
 }) => {
+    const router = useRouter();
+    const handleClick = () => {
+        router.push(`/item/${id}`);
+    };
+
     return (
-        <div className={styles.card}>
+        <button className={styles.card} onClick={handleClick}>
 
             <div className={styles.imageContainer}>
                 <ImageSearch src={image} alt={detail} />
@@ -73,6 +86,6 @@ export const CardProduct: FC<CardProductProps> = ({
             <div className={styles.cityContainer}>
                 <TextCity text={city} />
             </div>
-        </div>
+        </button>
     );
 };

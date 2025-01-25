@@ -24,6 +24,7 @@ export const CardProducts: FC<CardProductsProps> = ({ products }) => {
             {limitedProducts.map((product) => (
                 <CardProduct
                     key={product.id}
+                    id={product.id}
                     image={product.image}
                     price={product.price}
                     detail={product.detail}
