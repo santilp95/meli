@@ -1,3 +1,4 @@
+export { ProductImage } from "./productImage/ProductImage";
 export { BarInput } from "./barInput/BarInput";
 export { IconProduct } from "./iconProduct/IconProduct";
 export { ImageSearch } from "./imageSearch/ImageSearch";
