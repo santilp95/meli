@@ -10,3 +10,4 @@ export { TextDescriptionTitle } from "./textDescriptionTitle/TextDescriptionTitl
 export { TextDetail } from "./textDetail/TextDetail";
 export { TextPrice } from "./textPrice/TextPrice";
 export { TextStateProduct } from "./textStateProduct/TextStateProduct";
+export { TextTitleProduct } from "./textTitleProduct/TextTitleProduct";
