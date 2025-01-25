@@ -5,7 +5,7 @@ import { sampleProducts } from "@/utils";
 import { IProduct } from "@/domain";
 
 
-export default function Items() {
+export default function SearchResultPage() {
     const products: IProduct[] = sampleProducts;
 
     return (
