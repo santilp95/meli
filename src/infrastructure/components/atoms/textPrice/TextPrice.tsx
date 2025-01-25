@@ -7,16 +7,20 @@ interface TextPriceProps {
      * Price to describe a product price
      */
     price: number;
+    /**
+     * font size
+     */
+    fontSize?: string;
 }
 
 /**
  *  Text to describe a product price
  */
-export const TextPrice: FC<TextPriceProps> = ({ price }) => {
+export const TextPrice: FC<TextPriceProps> = ({ price , fontSize='24px'}) => {
     return (
         <p
             style={{
-                fontSize: "24px",
+                fontSize,
                 color: "#333333",
                 margin: 0,
             }}
