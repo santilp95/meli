@@ -1,4 +1,5 @@
 export { BarInput } from "./barInput/BarInput";
+export { DefaultButton } from "./defaultButton/DefaultButton";
 export { IconProduct } from "./iconProduct/IconProduct";
 export { ImageSearch } from "./imageSearch/ImageSearch";
 export { ProductImage } from "./productImage/ProductImage";

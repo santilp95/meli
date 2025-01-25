@@ -1,0 +1,19 @@
+.default-button {
+  background-color: #3483fa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.default-button:hover {
+  background-color: #2968c8;
+}
+
+.default-button:active {
+  background-color: #1f4d9c;
+}
