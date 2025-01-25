@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from 'next/navigation';
+import { Geist, Geist_Mono } from "next/font/google";
+
 import { Bar } from "@/infrastructure/components";
 
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./page.css";
 
@@ -20,9 +22,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { push } = useRouter();
+
   const handleSearch = (value: string) => {
-    console.log(value);
+    if (value.trim().length === 0) return;
+    push(`/items?search=${value}`);
   };
+
   const categories = ["Electrónica","Audio y Video", "Celulares y Teléfonos"];
 
   return (
