@@ -18,7 +18,6 @@ export const TextCity: FC<TextCityProps> = ({ text }) => {
             style={{
                 fontSize: "12px",
                 color: "#999999",
-                margin: 0,
             }}
         >
             {text}
