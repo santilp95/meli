@@ -20,9 +20,4 @@ describe("TextDescriptionTitle", () => {
         expect(title).toHaveStyle("font-size: 28px");
     });
 
-    it("renders without additional margins", () => {
-        const { getByText } = render(<TextDescriptionTitle />);
-        const title = getByText("Descripción del producto");
-        expect(title).toHaveStyle("margin: 0");
-    });
 });

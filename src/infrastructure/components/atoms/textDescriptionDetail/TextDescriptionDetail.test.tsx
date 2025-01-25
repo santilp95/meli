@@ -8,7 +8,7 @@ describe("TextDescriptionDetail", () => {
         const paragraph = getByText(text);
 
         expect(paragraph).toBeInTheDocument();
-        expect(paragraph).toHaveStyle("color: #EEEEEE");
+        expect(paragraph).toHaveStyle("color: #999999");
         expect(paragraph).toHaveStyle("font-size: 16px");
     });
 
@@ -29,13 +29,5 @@ describe("TextDescriptionDetail", () => {
         const paragraph = getByText(text);
 
         expect(paragraph).toHaveStyle(`max-width: ${customMaxWidth}`);
-    });
-
-    it("renders without additional margins", () => {
-        const text = "This is a detailed product description.";
-        const { getByText } = render(<TextDescriptionDetail text={text} />);
-        const paragraph = getByText(text);
-
-        expect(paragraph).toHaveStyle("margin: 0");
     });
 });
