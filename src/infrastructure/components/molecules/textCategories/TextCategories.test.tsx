@@ -33,12 +33,4 @@ describe("TextCategories", () => {
         const lastCategory = screen.getByText("Reproductores");
         expect(lastCategory).toHaveStyle("font-weight: bold");
     });
-
-    it.skip("applies padding correctly", () => {
-        const categories = ["Electrónica, Audio y Video", "iPod"];
-        const { container } = render(<TextCategories categories={categories} />);
-
-        // Verifica que el contenedor principal tiene el padding definido
-        expect(container.firstChild).toHaveStyle("padding: 16px 0");
-    });
 });

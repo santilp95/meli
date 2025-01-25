@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { FC } from "react";
+import Image from "next/image";
 
 interface ImageSearchProps {
     /**
@@ -20,12 +20,12 @@ interface ImageSearchProps {
  */
 export const ImageSearch: FC<ImageSearchProps> = ({ src, alt }) => {
     return (
-        <img
+        <Image
             src={src}
             alt={alt}
+            width={180}
+            height={180}
             style={{
-                width: "180px",
-                height: "180px",
                 borderRadius: "4px",
                 objectFit: "cover",
             }}
