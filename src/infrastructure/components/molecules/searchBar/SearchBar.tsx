@@ -3,7 +3,7 @@ import { FC, useState } from "react";
 
 import { BarInput, IconProduct, ShortButton } from "../../atoms";
 
-import styles from "./searchBar.module.css";
+import "./searchBar.css";
 
 interface SearchBarProps {
     /**
@@ -19,11 +19,7 @@ interface SearchBarProps {
 /**
  * Search bar component
  */
-export const SearchBar: FC<SearchBarProps> = ({
-    placeholder,
-    onSearch,
-
-}) => {
+export const SearchBar: FC<SearchBarProps> = ({ placeholder, onSearch }) => {
     const [search, setSearch] = useState("");
     const handleInputChange = (newValue: string) => {
         setSearch(newValue);
@@ -35,9 +31,7 @@ export const SearchBar: FC<SearchBarProps> = ({
         }
     };
     return (
-        <div
-            className={styles.searchBar}
-        >
+        <div className="search-bar container">
             <IconProduct />
             <BarInput
                 placeholder={placeholder}

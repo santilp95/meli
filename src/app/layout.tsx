@@ -22,7 +22,7 @@ export default function RootLayout({
   const handleSearch = (value: string) => {
     console.log(value);
   };
-  const categories = ["Electrónica, Audio y Video", "Celulares y Teléfonos"];
+  const categories = ["Electrónica","Audio y Video", "Celulares y Teléfonos"];
 
   return (
     <html lang="es">

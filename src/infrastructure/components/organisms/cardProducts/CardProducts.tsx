@@ -1,12 +1,10 @@
 "use client";
-
 import { FC } from "react";
 
 import { IProduct } from "@/domain";
-import { CardProduct } from '../../molecules';
+import { CardProduct } from "../../molecules";
 
-import styles from "./cardProducts.module.css";
-
+import "./cardProducts.css";
 
 interface CardProductsProps {
     /**
@@ -22,7 +20,7 @@ export const CardProducts: FC<CardProductsProps> = ({ products }) => {
     const limitedProducts = products.slice(0, 4);
 
     return (
-        <div className={styles.cardProducts}>
+        <div className="container container-middle card-products">
             {limitedProducts.map((product) => (
                 <CardProduct
                     key={product.id}
