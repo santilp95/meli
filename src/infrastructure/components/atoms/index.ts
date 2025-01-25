@@ -1,9 +1,12 @@
-export { ProductImage } from "./productImage/ProductImage";
 export { BarInput } from "./barInput/BarInput";
 export { IconProduct } from "./iconProduct/IconProduct";
 export { ImageSearch } from "./imageSearch/ImageSearch";
+export { ProductImage } from "./productImage/ProductImage";
 export { ShortButton } from "./shortButton/ShortButton";
 export { SmallIcon } from "./smallIcon/SmallIcon";
+export { TextCity } from "./textCity/TextCity";
+export { TextDescriptionDetail } from "./textDescriptionDetail/TextDescriptionDetail";
+export { TextDescriptionTitle } from "./textDescriptionTitle/TextDescriptionTitle";
 export { TextDetail } from "./textDetail/TextDetail";
 export { TextPrice } from "./textPrice/TextPrice";
-export { TextCity } from "./textCity/TextCity";
+export { TextStateProduct } from "./textStateProduct/TextStateProduct";
