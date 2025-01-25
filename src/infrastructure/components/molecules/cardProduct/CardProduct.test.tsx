@@ -51,6 +51,6 @@ describe('CardProduct', () => {
     const buttonElement = getByRole('button');
     fireEvent.click(buttonElement);
 
-    expect(push).toHaveBeenCalledWith('/item/1');
+    expect(push).toHaveBeenCalledWith('/items/1');
   });
 });

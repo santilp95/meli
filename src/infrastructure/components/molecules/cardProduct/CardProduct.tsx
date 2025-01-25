@@ -59,7 +59,7 @@ export const CardProduct: FC<CardProductProps> = ({
 }) => {
     const router = useRouter();
     const handleClick = () => {
-        router.push(`/item/${id}`);
+        router.push(`/items/${id}`);
     };
 
     return (
