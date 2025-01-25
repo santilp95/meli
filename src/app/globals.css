@@ -4,14 +4,10 @@
   --background: #EEEEEE;
   --foreground: #171717;
   --textDetail: #999999;
+  --margin-max-width: 1200px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #EEEEEE;
-    --foreground: #333333;
-  }
-}
+
 
 html,
 body {
@@ -21,7 +17,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: #EEEEEE;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,8 +34,10 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: light) {
-  html {
-    color-scheme: light;
-  }
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
