@@ -12,6 +12,6 @@
 }
 
 .separator {
-  color: #999999;
+  color: var(--textDetail);
   margin: 0 4px;
 }

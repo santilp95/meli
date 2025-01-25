@@ -1,5 +1,5 @@
 "use client";
-import { SearchBar } from "@/infrastructure/components";
+import { Bar } from "@/infrastructure/components";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -14,8 +14,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,6 +22,7 @@ export default function RootLayout({
   const handleSearch = (value: string) => {
     console.log(value);
   };
+  const categories = ["Electrónica, Audio y Video", "Celulares y Teléfonos"];
 
   return (
     <html lang="es">
@@ -31,12 +30,11 @@ export default function RootLayout({
         <title>Mercado Libre</title>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      <header className="header">
-        <SearchBar
-          placeholder="Nunca dejes de buscar"
+        <Bar
+          categories={categories}
           onSearch={handleSearch}
+          placeholder="Nunca dejes de buscar"
         />
-      </header>
         {children}
       </body>
     </html>
