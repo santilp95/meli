@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 
-import styles from "./textCategories.module.css";
+import "./textCategories.css";
 import { TextCategory } from "../../atoms/textCategory/TextCategory";
 
 interface TextCategoriesProps {
@@ -16,15 +16,15 @@ interface TextCategoriesProps {
  */
 export const TextCategories: FC<TextCategoriesProps> = ({ categories }) => {
     return (
-        <div className={styles.textCategories}>
+        <div className="text-categories">
             {categories.map((category, index) => (
-                <span key={category} className={styles.categoryItem}>
+                <span key={category} className="category-item">
                     <TextCategory
                         text={category}
                         isBold={index === categories.length - 1}
                     />
                     {index < categories.length - 1 && (
-                        <span className={styles.separator}> &gt; </span>
+                        <span className="separator"> &gt; </span>
                     )}
                 </span>
             ))}

@@ -4,7 +4,7 @@
   --background: #EEEEEE;
   --foreground: #333333;
   --textDetail: #999999;
-  --margin-max-width: 1200px;
+  --margin-max-width: 2400px;
 }
 
 
@@ -42,7 +42,7 @@ a {
 
 .container-middle {
   flex: 0 1 90%;
-  max-width: 90%;
+  max-width: var(--margin-max-width);
   margin-left: 5%;
   margin-right: 5%;
 }
