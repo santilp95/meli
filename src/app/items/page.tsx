@@ -6,13 +6,13 @@ import { IProduct } from "@/domain";
 
 
 export default function Items() {
-  const products: IProduct[] = sampleProducts;
+    const products: IProduct[] = sampleProducts;
 
-  return (
-    <div className="page">
-      <main className="main">
-        <CardProducts products={products} />
-      </main>
-    </div>
-  );
+    return (
+        <div className="page">
+            <main className="main">
+                <CardProducts products={products} />
+            </main>
+        </div>
+    );
 }
