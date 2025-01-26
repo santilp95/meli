@@ -11,12 +11,16 @@ interface CardProductsProps {
      * List of products
      */
     products: IProduct[];
+    /**
+    * Function to handle product click
+    */
+    onProductClick?: (id: string) => void;
 }
 
 /**
  * List card products
  */
-export const CardProducts: FC<CardProductsProps> = ({ products }) => {
+export const CardProducts: FC<CardProductsProps> = ({ products, onProductClick }) => {
     const limitedProducts = products.slice(0, 4);
 
     return (
@@ -31,6 +35,7 @@ export const CardProducts: FC<CardProductsProps> = ({ products }) => {
                     stateOfTheProduct={product.stateOfTheProduct}
                     city={product.city}
                     hasShippingIcon={product.hasShippingIcon}
+                    onClick={onProductClick}
                 />
             ))}
         </div>

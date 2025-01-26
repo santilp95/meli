@@ -1,8 +1,5 @@
 "use client";
-
 import { FC } from "react";
-import { useRouter } from 'next/navigation'
-
 
 import {
     ImageSearch,
@@ -43,6 +40,10 @@ export interface CardProductProps {
      * Product id
      */
     id: string;
+    /**
+     * Click handler
+     */
+    onClick?: (id: string) => void;
 }
 
 /**
@@ -56,10 +57,12 @@ export const CardProduct: FC<CardProductProps> = ({
     stateOfTheProduct = "Completo unico!",
     hasShippingIcon = false,
     id,
+    onClick,
 }) => {
-    const router = useRouter();
     const handleClick = () => {
-        router.push(`/items/${id}`);
+        if (onClick) {
+            onClick(id);
+        }
     };
 
     return (

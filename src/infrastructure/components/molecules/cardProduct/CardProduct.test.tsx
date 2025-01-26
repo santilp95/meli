@@ -1,11 +1,7 @@
-import { render, fireEvent } from '@testing-library/react';
-import { useRouter } from 'next/navigation';
+import { render } from '@testing-library/react';
 
 import { CardProduct } from './CardProduct';
 
-jest.mock('next/navigation', () => ({
-  useRouter: jest.fn(),
-}));
 
 describe('CardProduct', () => {
   const defaultProps = {
@@ -43,14 +39,4 @@ describe('CardProduct', () => {
     expect(cityElement).toBeInTheDocument();
   });
 
-  it('redirects to the correct route when clicked', () => {
-    const push = jest.fn();
-    (useRouter as jest.Mock).mockReturnValue({ push });
-
-    const { getByRole } = render(<CardProduct {...defaultProps} />);
-    const buttonElement = getByRole('button');
-    fireEvent.click(buttonElement);
-
-    expect(push).toHaveBeenCalledWith('/items/1');
-  });
 });
