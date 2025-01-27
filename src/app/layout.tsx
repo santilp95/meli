@@ -3,10 +3,10 @@ import { useRouter } from 'next/navigation';
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { Bar } from "@/infrastructure/components";
+import { BreadCrumbProvider } from '@/application/shared/context/breadCrumb';
 
 import "./globals.css";
 import "./page.css";
-import { BreadCrumbProvider } from '@/application/shared/context/breadCrumb';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +26,15 @@ export default function RootLayout({
   const { push } = useRouter();
 
   const handleSearch = (value: string) => {
-    if (value.trim().length === 0) return;
-    push(`/items?search=${value}`);
+    if (value.trim().length === 0) {
+      push('/');
+    }else{
+      push(`/items?search=${value}`);
+    }
+  };
+
+  const handleClickIcon = ()=>{
+    push('/');
   };
 
   return (
@@ -39,6 +46,7 @@ export default function RootLayout({
         <BreadCrumbProvider>
           <Bar
             onSearch={handleSearch}
+            onClickIcon={handleClickIcon}
             placeholder="Nunca dejes de buscar"
           />
           {children}

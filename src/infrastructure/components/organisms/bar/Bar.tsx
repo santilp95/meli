@@ -8,13 +8,27 @@ import { useBreadContext } from '@/application/shared/context/breadCrumb';
 
 
 interface BarProps {
+    /**
+     * placeholder to show text
+     */
     placeholder?: string;
+    /**
+     * get data search
+     */
     onSearch?: (value: string) => void;
+    /**
+    * click in icon
+    */
+    onClickIcon?: () => void;
 }
 
+/**
+ * Bar component
+ */
 export const Bar: FC<BarProps> = ({
     placeholder,
-    onSearch
+    onSearch,
+    onClickIcon,
 }) => {
     const { categories } = useBreadContext();
 
@@ -25,6 +39,7 @@ export const Bar: FC<BarProps> = ({
                 <SearchBar
                     placeholder={placeholder}
                     onSearch={onSearch}
+                    onClickIcon={onClickIcon}
                 />
             </div>
             <div className="container container-middle">
