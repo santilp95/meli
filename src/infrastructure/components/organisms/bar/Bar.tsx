@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { SearchBar, TextCategories } from '../../molecules';
 
 import "./bar.css";
-import { useBreadContext } from '@/application/shared/context/breadCrumb';
+import { useBreadContext } from '@/adapters/shared/context/breadCrumb';
 
 
 interface BarProps {

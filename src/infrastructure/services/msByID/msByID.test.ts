@@ -1,5 +1,5 @@
 import { msById } from "./msByID";
-import { FetchAdapter } from "../../../application/utils/fetch/fetchAdapter";
+import { FetchAdapter } from "../../../adapters/utils/fetch/fetchAdapter";
 
 describe("msById", () => {
     const id = "test";

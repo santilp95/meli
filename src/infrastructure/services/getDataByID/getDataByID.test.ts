@@ -1,7 +1,7 @@
 import { getDataByID } from "./getDataByID";
 import { msById } from "../msByID/msByID";
 import { msDescriptionByID } from "../msDescriptionByID/msDescriptionByID";
-import { author } from "@/application";
+import { author } from "@/adapters";
 
 jest.mock("../msByID/msByID");
 jest.mock("../msDescriptionByID/msDescriptionByID");

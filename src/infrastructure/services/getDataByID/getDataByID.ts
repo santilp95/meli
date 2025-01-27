@@ -1,4 +1,4 @@
-import { author } from "@/application";
+import { author } from "@/adapters";
 import { IItemTransform, IResponseTransformDataByID } from "@/domain";
 import { msById } from "../msByID/msByID";
 import { msDescriptionByID } from "../msDescriptionByID/msDescriptionByID";

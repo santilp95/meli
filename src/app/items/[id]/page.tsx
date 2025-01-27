@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation";
 
 import { CardDetail, Loading } from "@/infrastructure/components";
-import { useGetDataByID } from "@/application/hooks";
+import { useGetDataByID } from "@/adapters/hooks";
 import { useEffect } from "react";
 
 export default function DetailProductPage() {

@@ -1,4 +1,4 @@
-import { FetchAdapter } from "@/application";
+import { FetchAdapter } from "@/adapters";
 import { IResponseDataByID } from "@/domain";
 
 export const msById = async (id: string): Promise<IResponseDataByID> => {

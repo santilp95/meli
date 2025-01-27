@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { Bar } from "@/infrastructure/components";
-import { BreadCrumbProvider } from '@/application/shared/context/breadCrumb';
+import { BreadCrumbProvider } from '@/adapters/shared/context/breadCrumb';
 
 import "./globals.css";
 import "./page.css";

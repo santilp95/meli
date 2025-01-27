@@ -1,4 +1,4 @@
-import { FetchAdapter } from "@/application";
+import { FetchAdapter } from "@/adapters";
 import { IResponseDescription } from "@/domain";
 
 export const msDescriptionByID = async (id: string) => {

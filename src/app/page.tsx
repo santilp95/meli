@@ -1,6 +1,6 @@
 "use client";
 
-import { useBreadContext } from "@/application/shared/context/breadCrumb";
+import { useBreadContext } from "@/adapters/shared/context/breadCrumb";
 import { useEffect, useRef } from "react";
 
 export default function Home() {

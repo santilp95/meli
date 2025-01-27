@@ -1,8 +1,8 @@
 import { msQuery } from "./msQuery";
-import { FetchAdapter } from "../../../application/utils/fetch/fetchAdapter";
-import { transformQuery } from "../../../application/utils/transformQuery/transformQuery";
+import { FetchAdapter } from "../../../adapters/utils/fetch/fetchAdapter";
+import { transformQuery } from "../../../adapters/utils/transformQuery/transformQuery";
 
-jest.mock("../../../application/utils/transformQuery/transformQuery", () => ({
+jest.mock("../../../adapters/utils/transformQuery/transformQuery", () => ({
     __esModule: true,
     transformQuery: jest.fn(() => ({ transformed: true })),
 }));

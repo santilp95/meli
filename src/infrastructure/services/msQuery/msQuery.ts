@@ -1,4 +1,4 @@
-import { FetchAdapter, transformQuery } from "@/application";
+import { FetchAdapter, transformQuery } from "@/adapters";
 import { IResponseQuery, IResponseTransformQuery } from "@/domain";
 
 export const msQuery = async (

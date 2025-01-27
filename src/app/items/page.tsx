@@ -2,9 +2,9 @@
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-import { useGetQuery } from "@/application/hooks";
+import { useGetQuery } from "@/adapters/hooks";
 import { CardProducts, Loading } from "@/infrastructure/components";
-import { useBreadContext } from "@/application/shared/context/breadCrumb";
+import { useBreadContext } from "@/adapters/shared/context/breadCrumb";
 
 
 export default function SearchResultPage() {

@@ -1,5 +1,5 @@
 import { msDescriptionByID } from './msDescriptionByID';
-import { FetchAdapter } from '@/application';
+import { FetchAdapter } from '@/adapters';
 import { IResponseDescription, Snapshot } from '@/domain';
 
 describe('msDescriptionByID', () => {

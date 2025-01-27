@@ -1,10 +1,10 @@
 import { render, fireEvent } from "@testing-library/react";
 import { Bar } from "./Bar";
-import { useBreadContext } from '../../../../application/shared/context/breadCrumb/BreadCrumbProvider';
+import { useBreadContext } from '../../../../adapters/shared/context/breadCrumb/BreadCrumbProvider';
 
 
 
-jest.mock('../../../../application/shared/context/breadCrumb/BreadCrumbProvider', () => ({
+jest.mock('../../../../adapters/shared/context/breadCrumb/BreadCrumbProvider', () => ({
     useBreadContext: jest.fn(),
 }));
 
