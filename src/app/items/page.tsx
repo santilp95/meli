@@ -1,15 +1,12 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { useGetQuery } from "@/adapters/hooks";
 import { CardProducts, Loading } from "@/infrastructure/components";
 import { useBreadContext } from "@/adapters/shared/context/breadCrumb";
 
-
-export default function SearchResultPage() {
-
-
+const SearchResultContent = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const search = searchParams.get("search") ?? '';
@@ -22,9 +19,8 @@ export default function SearchResultPage() {
     const { setCategories } = useBreadContext();
 
     useEffect(() => {
-        setCategories(categories)
+        setCategories(categories);
     }, [categories, setCategories]);
-
 
     const handleProductClick = (id: string) => {
         router.push(`/items/${id}`);
@@ -40,5 +36,13 @@ export default function SearchResultPage() {
                 )}
             </main>
         </div>
+    );
+};
+
+export default function SearchResultPage() {
+    return (
+        <Suspense fallback={<Loading />}>
+            <SearchResultContent />
+        </Suspense>
     );
 }
