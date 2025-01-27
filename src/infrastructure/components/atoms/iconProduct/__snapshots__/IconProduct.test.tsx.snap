@@ -3,6 +3,7 @@
 exports[`IconProduct should render 1`] = `
 <div>
   <button
+    data-testid="logo-icon"
     style="background: none; padding: 0px; cursor: pointer;"
   >
     <img
