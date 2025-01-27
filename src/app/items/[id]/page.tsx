@@ -2,27 +2,31 @@
 import { useParams } from "next/navigation";
 
 import { CardDetail } from "@/infrastructure/components";
+import { useGetDataByID } from "@/application/hooks";
 
 export default function DetailProductPage() {
     const params = useParams();
     const { id } = params;
-    console.log({ id });
-    const image =
-        "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2024/09/iPhone-16-pro-1.jpg?x=480&y=375&quality=80";
+    const { data, error, loading } = useGetDataByID(id as string)
+
 
     return (
         <div className="page">
             <main className="main">
                 <div className="container container-middle">
-                    <CardDetail
-                        alt="iphone"
-                        image={image}
-                        buttonText="Comprar"
-                        description="This is a detailed product description."
-                        price={1980}
-                        state="Nuevo - 234 vendidos"
-                        title="Deco Reverse Sombrero Oxford"
-                    />
+                    {loading && <p>Loading...</p>}
+                    {error && <p>Error: {error}</p>}
+                    {!loading && !error && !!data && (
+                        <CardDetail
+                            alt={data.alt}
+                            image={data.image}
+                            buttonText="Comprar"
+                            description={data.description}
+                            price={data.price}
+                            state={data.state}
+                            title={data.title}
+                        />
+                    )}
                 </div>
             </main>
         </div>
