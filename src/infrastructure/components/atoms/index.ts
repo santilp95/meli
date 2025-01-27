@@ -2,6 +2,7 @@ export { BarInput } from "./barInput/BarInput";
 export { DefaultButton } from "./defaultButton/DefaultButton";
 export { IconProduct } from "./iconProduct/IconProduct";
 export { ImageSearch } from "./imageSearch/ImageSearch";
+export { Loading } from "./loading/Loading";
 export { ProductImage } from "./productImage/ProductImage";
 export { ShortButton } from "./shortButton/ShortButton";
 export { SmallIcon } from "./smallIcon/SmallIcon";

@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 
-import { CardDetail } from "@/infrastructure/components";
+import { CardDetail, Loading } from "@/infrastructure/components";
 import { useGetDataByID } from "@/application/hooks";
 
 export default function DetailProductPage() {
@@ -14,7 +14,7 @@ export default function DetailProductPage() {
         <div className="page">
             <main className="main">
                 <div className="container container-middle">
-                    {loading && <p>Loading...</p>}
+                    {loading && <Loading/>}
                     {error && <p>Error: {error}</p>}
                     {!loading && !error && !!data && (
                         <CardDetail

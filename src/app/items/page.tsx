@@ -2,7 +2,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { useGetQuery } from "@/application/hooks";
-import { CardProducts } from "@/infrastructure/components";
+import { CardProducts, Loading } from "@/infrastructure/components";
 
 
 export default function SearchResultPage() {
@@ -19,7 +19,7 @@ export default function SearchResultPage() {
     return (
         <div className="page">
             <main className="main">
-                {loading && <p>Loading...</p>}
+                {loading && <Loading/>}
                 {error && <p>Error: {error}</p>}
                 {!loading && !error && (
                     <CardProducts products={products} onProductClick={handleProductClick} />
