@@ -14,6 +14,10 @@ export default function SearchResultPage() {
     const searchParams = useSearchParams();
     const search = searchParams.get("search") ?? '';
 
+    useEffect(() => {
+        document.title = search || "Mercado Libre";
+    }, [search]);
+
     const { categories, products, loading, error } = useGetQuery(search);
     const { setCategories } = useBreadContext();
 

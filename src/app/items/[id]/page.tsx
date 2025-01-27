@@ -3,12 +3,15 @@ import { useParams } from "next/navigation";
 
 import { CardDetail, Loading } from "@/infrastructure/components";
 import { useGetDataByID } from "@/application/hooks";
+import { useEffect } from "react";
 
 export default function DetailProductPage() {
     const params = useParams();
     const { id } = params;
     const { data, error, loading } = useGetDataByID(id as string)
-
+    useEffect(() => {
+        document.title = data?.title || "Mercado Libre";
+    }, [data?.title]);
 
     return (
         <div className="page">
