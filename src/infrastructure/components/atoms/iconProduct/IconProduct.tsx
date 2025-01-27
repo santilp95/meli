@@ -24,6 +24,7 @@ export const IconProduct: FC<IconProductProps> = ({ onClick }) => {
         padding: 0,
         cursor: "pointer",
       }}
+      data-testid="logo-icon"
     >
       <Image src={logo} alt="Logo" width={40} height={30} />
     </button>

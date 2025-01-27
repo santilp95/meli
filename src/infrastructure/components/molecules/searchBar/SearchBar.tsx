@@ -14,13 +14,22 @@ interface SearchBarProps {
      * Function to handle the search
      */
     onSearch?: (value: string) => void;
+    /**
+     * click in icon
+     */
+    onClickIcon?: () => void;
+
 }
 
 /**
  * Search bar component
  */
-export const SearchBar: FC<SearchBarProps> = ({ placeholder, onSearch }) => {
-    const [search, setSearch] = useState("");
+export const SearchBar: FC<SearchBarProps> = ({
+    placeholder,
+    onSearch,
+    onClickIcon,
+}) => {
+    const [search, setSearch] = useState('');
 
     const handleInputChange = (newValue: string) => {
         setSearch(newValue);
@@ -32,6 +41,13 @@ export const SearchBar: FC<SearchBarProps> = ({ placeholder, onSearch }) => {
         }
     };
 
+    const handleClickIconButton = ()=>{
+        if (onClickIcon) {
+            onClickIcon();
+            setSearch('');
+        }
+    }
+
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
             handleSearch();
@@ -40,7 +56,7 @@ export const SearchBar: FC<SearchBarProps> = ({ placeholder, onSearch }) => {
 
     return (
         <div className="search-bar container">
-            <IconProduct />
+            <IconProduct onClick={handleClickIconButton} />
             <BarInput
                 placeholder={placeholder}
                 value={search}
