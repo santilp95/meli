@@ -39,7 +39,7 @@ export const BreadCrumbProvider: FC<PropsWithChildren> = ({ children }) => {
 export const useBreadContext = () => {
   const context = useContext(BreadCrumbContext);
 
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useBreadContext must be used within a BreadCrumbProvider');
   }
 
