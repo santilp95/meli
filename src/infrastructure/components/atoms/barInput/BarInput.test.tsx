@@ -1,5 +1,4 @@
 import { render, fireEvent } from '@testing-library/react';
-
 import { BarInput } from './BarInput';
 
 describe('BarInput', () => {
@@ -30,4 +29,9 @@ describe('BarInput', () => {
         expect(handleChange).toHaveBeenCalledTimes(1);
     });
 
+    it('renders with default placeholder text when placeholder is not provided', () => {
+        const { getByPlaceholderText } = render(<BarInput />);
+        const inputElement = getByPlaceholderText('Nunca dejes de buscar');
+        expect(inputElement).toBeInTheDocument();
+    });
 });
