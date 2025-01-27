@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 
 import { CardProducts } from "./CardProducts";
 import { IProduct } from "@/domain";
-import { sampleProducts } from "@/utils";
+import sampleProducts from "./sampleProducts.json";
 
 const sampleProductsMock: IProduct[] = sampleProducts;
 
