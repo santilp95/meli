@@ -38,7 +38,6 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <BreadCrumbProvider>
           <Bar
-            categories={[]}
             onSearch={handleSearch}
             placeholder="Nunca dejes de buscar"
           />
