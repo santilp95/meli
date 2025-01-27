@@ -27,7 +27,7 @@ export default function SearchResultPage() {
     };
 
     return (
-        <div className="page">
+        <div className="page" key={search}>
             <main className="main">
                 {loading && <Loading />}
                 {error && <p>Error: {error}</p>}

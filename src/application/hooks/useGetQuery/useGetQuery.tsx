@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import { msQuery } from "@/infrastructure/services";
 import { IProduct, IResponseTransformQuery } from "@/domain";
@@ -11,10 +11,10 @@ export const useGetQuery = (search?: string) => {
     const [products, setProducts] = useState<IProduct[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
-    const hasFetched = useRef<boolean>(false);
+
 
     useEffect(() => {
-        if (search && !hasFetched.current) {
+        if (search) {
             setLoading(true);
             msQuery(search)
                 .then((response: IResponseTransformQuery) => {
@@ -31,7 +31,6 @@ export const useGetQuery = (search?: string) => {
                     console.log({cat: response.categories});
                     setCategories(response.categories!);
                     setLoading(false);
-                    hasFetched.current = true;
                 })
                 .catch((error) => {
                     setError(error.message);
