@@ -7,3 +7,12 @@ export interface IProduct {
     city: string;
     hasShippingIcon: boolean;
 }
+
+export interface ICardProduct {
+    image: string,
+    alt: string,
+    state: string,
+    title: string,
+    price: number,
+    description: string,
+}
