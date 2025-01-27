@@ -196,13 +196,10 @@ export enum Name {
 
 export interface Struct {
     number: number;
-    unit:   Unit;
+    unit:   string;
 }
 
-export enum Unit {
-    CM = "cm",
-    G = "g",
-}
+
 
 export enum Value {
     List = "list",
