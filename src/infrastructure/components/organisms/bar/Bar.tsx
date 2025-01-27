@@ -4,19 +4,20 @@ import { FC } from 'react';
 import { SearchBar, TextCategories } from '../../molecules';
 
 import "./bar.css";
+import { useBreadContext } from '@/application/shared/context/breadCrumb';
 
 
 interface BarProps {
     placeholder?: string;
     onSearch?: (value: string) => void;
-    categories: string[];
 }
 
 export const Bar: FC<BarProps> = ({
     placeholder,
-    categories,
     onSearch
 }) => {
+    const { categories } = useBreadContext();
+
 
     return (
         <header className="header">

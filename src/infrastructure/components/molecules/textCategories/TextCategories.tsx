@@ -8,13 +8,13 @@ interface TextCategoriesProps {
     /**
      * Array of category strings
      */
-    categories: string[];
+    categories?: string[];
 }
 
 /**
  * TextCategories component
  */
-export const TextCategories: FC<TextCategoriesProps> = ({ categories }) => {
+export const TextCategories: FC<TextCategoriesProps> = ({ categories=[] }) => {
     return (
         <div className="text-categories">
             {categories.map((category, index) => (

@@ -1,35 +1,47 @@
 'use client';
 import {
-  useReducer,
   useMemo,
   PropsWithChildren,
   FC,
+  useState,
+  createContext,
+  useContext,
 } from "react";
 
-import { breadCrumbReducer } from "./breadCrumbReducer";
-import { BreadCrumbContext } from "./BreadCrumbContext";
-
-export interface BreadCrumbState {
-  categories: string[]
+interface ContextProps {
+    categories: string[];
+    setCategories: (categories: string[]) => void;
 }
 
-const BREAD_INITIAL_STATE: BreadCrumbState = {
-  categories: []
-};
+export const BreadCrumbContext = createContext<ContextProps>({
+    categories: [],
+    setCategories: () => {},
+});
+
+export type BreadCrumbState = string[]
 
 export const BreadCrumbProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [state, dispatch] = useReducer(breadCrumbReducer, BREAD_INITIAL_STATE);
+  const [categories, setCategories] = useState<string[]>([]);
 
-  const setCategories = (categories: string[]) => {
-    dispatch({ type: 'SET_BREADCRUMB', payload: categories });
+  const setData = (data: string[]) => {
+    setCategories(data);
   };
 
-
-  const value = useMemo(() => ({ ...state, setCategories }), [state]);
+  const value = useMemo(() => ({ categories, setCategories: setData }), [categories]);
 
   return (
     <BreadCrumbContext.Provider value={value}>
       {children}
     </BreadCrumbContext.Provider>
   );
+};
+
+export const useBreadContext = () => {
+  const context = useContext(BreadCrumbContext);
+
+  if (context === undefined) {
+    throw new Error('useBreadContext must be used within a BreadCrumbProvider');
+  }
+
+  return context;
 };

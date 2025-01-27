@@ -6,6 +6,7 @@ import { Bar } from "@/infrastructure/components";
 
 import "./globals.css";
 import "./page.css";
+import { BreadCrumbProvider } from '@/application/shared/context/breadCrumb';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,20 +30,20 @@ export default function RootLayout({
     push(`/items?search=${value}`);
   };
 
-  const categories = ["Electrónica","Audio y Video", "Celulares y Teléfonos"];
-
   return (
     <html lang="es">
       <head>
         <title>Mercado Libre</title>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Bar
-          categories={categories}
-          onSearch={handleSearch}
-          placeholder="Nunca dejes de buscar"
-        />
-        {children}
+        <BreadCrumbProvider>
+          <Bar
+            categories={[]}
+            onSearch={handleSearch}
+            placeholder="Nunca dejes de buscar"
+          />
+          {children}
+        </BreadCrumbProvider>
       </body>
     </html>
   );
