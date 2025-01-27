@@ -2,7 +2,9 @@
 
 exports[`IconProduct should render 1`] = `
 <div>
-  <div>
+  <button
+    style="background: none; padding: 0px; cursor: pointer;"
+  >
     <img
       alt="Logo"
       data-nimg="1"
@@ -14,6 +16,6 @@ exports[`IconProduct should render 1`] = `
       style="color: transparent;"
       width="40"
     />
-  </div>
+  </button>
 </div>
 `;
