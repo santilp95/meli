@@ -2,9 +2,10 @@ import { renderHook, waitFor } from '@testing-library/react';
 import { useGetQuery } from './useGetQuery';
 
 import { IResponseTransformQuery } from '@/domain';
-import { msQuery } from '../../../infrastructure/services/msQuery/msQuery';
+import { msQuery } from '@/infrastructure/services';
 
-jest.mock('../../../infrastructure/services/msQuery/msQuery',()=>({
+
+jest.mock('../../../infrastructure/services',()=>({
     msQuery: jest.fn(),
 }))
 
