@@ -1,7 +1,7 @@
 "use client";
-
 import { FC } from "react";
-import "./defaultButton.css";
+
+import "./defaultButton.scss";
 
 interface DefaultButtonProps {
     /**

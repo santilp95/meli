@@ -5,7 +5,7 @@ import { FC } from "react";
 import { ProductImage } from "../../atoms";
 import { ProductDetail, ProductInfo } from "../../molecules";
 
-import "./cardDetail.css";
+import "./cardDetail.scss";
 
 interface CardDetailProps {
     /**

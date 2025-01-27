@@ -9,7 +9,7 @@ import {
     TextDetail,
 } from "../../atoms";
 
-import styles from "./CardProduct.module.css";
+import "./CardProduct.scss";
 
 export interface CardProductProps {
     /**
@@ -66,19 +66,19 @@ export const CardProduct: FC<CardProductProps> = ({
     };
 
     return (
-        <button className={styles.card} onClick={handleClick}>
+        <button className="card" onClick={handleClick}>
 
-            <div className={styles.imageContainer}>
+            <div className="image-container">
                 <ImageSearch src={image} alt={detail} />
             </div>
 
 
-            <div className={styles.infoContainer}>
-                <div className={styles.priceContainer}>
+            <div className="info-container">
+                <div className="price-container">
                     <TextPrice price={price} />
                     {hasShippingIcon && <SmallIcon />}
                 </div>
-                <div className={styles.detailContainer}>
+                <div className="detail-container">
                     <TextDetail text={detail} />
                     <TextDetail text={stateOfTheProduct} />
                 </div>
@@ -86,7 +86,7 @@ export const CardProduct: FC<CardProductProps> = ({
             </div>
 
 
-            <div className={styles.cityContainer}>
+            <div className="city-container">
                 <TextCity text={city} />
             </div>
         </button>

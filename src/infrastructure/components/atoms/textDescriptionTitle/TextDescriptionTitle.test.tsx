@@ -7,8 +7,6 @@ describe("TextDescriptionTitle", () => {
         const { getByText } = render(<TextDescriptionTitle />);
         const title = getByText("Descripción del producto");
         expect(title).toBeInTheDocument();
-        expect(title).toHaveStyle("color: #333333");
-        expect(title).toHaveStyle("font-size: 28px");
     });
 
     it("renders with the provided text", () => {
@@ -16,8 +14,7 @@ describe("TextDescriptionTitle", () => {
         const { getByText } = render(<TextDescriptionTitle text={customText} />);
         const title = getByText(customText);
         expect(title).toBeInTheDocument();
-        expect(title).toHaveStyle("color: #333333");
-        expect(title).toHaveStyle("font-size: 28px");
+        expect(title).toHaveClass("text-description-title");
     });
 
 });

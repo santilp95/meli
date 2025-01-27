@@ -1,6 +1,7 @@
 "use client";
-
 import { FC } from "react";
+
+import './textDescriptionDetail.scss'
 
 interface TextDescriptionDetailProps {
     /**
@@ -22,12 +23,9 @@ export const TextDescriptionDetail: FC<TextDescriptionDetailProps> = ({
 }) => {
     return (
         <p
+            className="text-description-detail"
             style={{
-                color: "#999999",
-                fontSize: "16px",
                 maxWidth,
-                lineHeight: "1.5",
-                width: "100%",
             }}
         >
             {text}

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import './loading.css';
+import './loading.scss';
 
 export const Loading: FC = () => {
     return (

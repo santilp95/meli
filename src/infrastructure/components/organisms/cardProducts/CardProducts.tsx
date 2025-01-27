@@ -4,7 +4,7 @@ import { FC } from "react";
 import { IProduct } from "@/domain";
 import { CardProduct } from "../../molecules";
 
-import "./cardProducts.css";
+import "./cardProducts.scss";
 
 interface CardProductsProps {
     /**

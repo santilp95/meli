@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import "./textTitleProduct.css";
+import "./textTitleProduct.scss";
 
 interface TextTitleProductProps {
   /**

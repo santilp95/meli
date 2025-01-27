@@ -1,8 +1,9 @@
 "use client";
 import { FC } from "react";
 
-import "./textCategories.css";
 import { TextCategory } from "../../atoms/textCategory/TextCategory";
+
+import "./textCategories.scss";
 
 interface TextCategoriesProps {
     /**

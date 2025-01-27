@@ -1,8 +1,9 @@
 "use client";
-
 import { FC } from "react";
-import "./productDetail.css";
+
 import { TextDescriptionDetail, TextDescriptionTitle } from "../../atoms";
+
+import "./productDetail.scss";
 
 
 interface ProductDetailProps {

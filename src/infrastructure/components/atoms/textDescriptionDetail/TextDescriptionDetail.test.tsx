@@ -8,8 +8,7 @@ describe("TextDescriptionDetail", () => {
         const paragraph = getByText(text);
 
         expect(paragraph).toBeInTheDocument();
-        expect(paragraph).toHaveStyle("color: #999999");
-        expect(paragraph).toHaveStyle("font-size: 16px");
+        expect(paragraph).toHaveClass("text-description-detail");
     });
 
     it("applies the default maxWidth when not provided", () => {

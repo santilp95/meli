@@ -8,7 +8,7 @@ import {
     TextTitleProduct,
 } from "../../atoms";
 
-import "./productInfo.css";
+import "./productInfo.scss";
 
 interface ProductInfoProps {
     /**

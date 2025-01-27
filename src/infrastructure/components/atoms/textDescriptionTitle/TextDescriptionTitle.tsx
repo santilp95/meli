@@ -1,6 +1,8 @@
 "use client";
-
 import { FC } from "react";
+
+import './textDescriptionTitle.scss'
+
 
 interface TextDescriptionTitleProps {
     /**
@@ -17,10 +19,7 @@ export const TextDescriptionTitle: FC<TextDescriptionTitleProps> = ({
 }) => {
     return (
         <h2
-            style={{
-                color: "#333333",
-                fontSize: "28px",
-            }}
+            className="text-description-title"
         >
             {text}
         </h2>

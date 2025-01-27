@@ -12,24 +12,24 @@
 }
 
 
-.imageContainer {
+.image-container {
   flex-shrink: 0; /* Evita que la imagen cambie de tamaño */
 }
 
 
-.infoContainer {
+.info-container {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.priceContainer {
+.price-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.detailContainer {
+.detail-container {
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -39,7 +39,7 @@
 }
 
 
-.cityContainer {
+.city-container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
