@@ -28,7 +28,6 @@ export const useGetQuery = (search?: string) => {
                         hasShippingIcon: item.free_shipping,
                     }));
                     setProducts(products);
-                    console.log({cat: response.categories});
                     setCategories(response.categories!);
                     setLoading(false);
                 })
