@@ -1,16 +1,17 @@
 "use client";
+import { useEffect } from "react";
 import { useParams } from "next/navigation";
 
 import { CardDetail, Loading } from "@/infrastructure/components";
 import { useGetDataByID } from "@/adapters/hooks";
-import { useEffect } from "react";
 
 export default function DetailProductPage() {
     const params = useParams();
     const { id } = params;
     const { data, error, loading } = useGetDataByID(id as string)
+
     useEffect(() => {
-        document.title = data?.title || "Mercado Libre";
+        document.title = data?.title ?? "Mercado Libre";
     }, [data?.title]);
 
     return (

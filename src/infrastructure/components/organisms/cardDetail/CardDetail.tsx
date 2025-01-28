@@ -7,7 +7,7 @@ import { ProductDetail, ProductInfo } from "../../molecules";
 
 import "./cardDetail.scss";
 
-interface CardDetailProps {
+export interface CardDetailProps {
     /**
      * The image of the product
      */
