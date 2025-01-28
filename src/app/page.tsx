@@ -1,7 +1,7 @@
 "use client";
+import { useEffect, useRef } from "react";
 
 import { useBreadContext } from "@/adapters/shared/context/breadCrumb";
-import { useEffect, useRef } from "react";
 
 export default function Home() {
   const { setCategories } = useBreadContext();
