@@ -7,7 +7,7 @@ import { useBreadContext } from '@/adapters/shared/context/breadCrumb';
 import "./bar.scss";
 
 
-interface BarProps {
+export interface BarProps {
     /**
      * placeholder to show text
      */
