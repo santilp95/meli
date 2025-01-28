@@ -16,13 +16,13 @@ interface TextPriceProps {
 /**
  *  Text to describe a product price
  */
-export const TextPrice: FC<TextPriceProps> = ({ price , fontSize='24px'}) => {
+export const TextPrice: FC<TextPriceProps> = ({ price, fontSize = "24px" }) => {
     return (
         <p
             style={{
                 fontSize,
-                color: "#333333",
             }}
+            className="text-color-black"
             data-testid="text-price"
         >
             $ {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}

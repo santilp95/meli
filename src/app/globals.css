@@ -1,8 +1,12 @@
 :root {
-  --primary: #ffe600;
-  --secondary: #f5f5f5
+  --yellow: #ffe600;
+  --black:#333333;
+  --grey-bold: #666666;
+  --grey: #999999;
+  --gray-light: #EEEEEE;
+  --blue: #3483FA;
+  --white: #FFFFFF
   --background: #EEEEEE;
-  --foreground: #333333;
   --textDetail: #999999;
   --margin-max-width: 2400px;
 }
@@ -16,8 +20,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background-color: #EEEEEE;
+  color: var(--black);
+  background-color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

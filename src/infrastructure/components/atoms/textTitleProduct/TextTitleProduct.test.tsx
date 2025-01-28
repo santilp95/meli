@@ -17,6 +17,6 @@ describe("TextTitleProduct", () => {
     const { getByText } = render(<TextTitleProduct text={text} />);
     const title = getByText(text);
 
-    expect(title).toHaveStyle("color: var(--foreground)");
+    expect(title).toHaveStyle("color: var(--black)");
   });
 });

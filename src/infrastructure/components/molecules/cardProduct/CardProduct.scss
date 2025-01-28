@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: flex-start;
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  background-color: var(--white);
+  border: 1px solid var(--gray-light);
   border-radius: 0;
   padding: 16px;
   gap: 16px;
