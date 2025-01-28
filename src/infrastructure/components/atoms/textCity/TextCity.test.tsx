@@ -12,7 +12,6 @@ describe('TextCity', () => {
     it('applies correct styles', () => {
         const { getByText } = render(<TextCity text="Sample City" />);
         const textElement = getByText('Sample City');
-        expect(textElement).toHaveStyle('font-size: 12px');
-        expect(textElement).toHaveStyle('color: #999999');
+        expect(textElement).toHaveClass('text-city');
     });
 });

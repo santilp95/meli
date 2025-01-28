@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 
-import style from "./textDetail.module.css";
+import  "./textDetail.scss";
 
 interface TextDetailProps {
     /**
@@ -15,5 +15,5 @@ interface TextDetailProps {
  * Text to describe a product
  */
 export const TextDetail: FC<TextDetailProps> = ({ text }) => {
-    return <p className={style.textDetail}>{text}</p>;
+    return <p className="text-detail">{text}</p>;
 };

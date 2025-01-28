@@ -2,9 +2,9 @@
 import { FC } from 'react';
 
 import { SearchBar, TextCategories } from '../../molecules';
-
-import "./bar.css";
 import { useBreadContext } from '@/adapters/shared/context/breadCrumb';
+
+import "./bar.scss";
 
 
 interface BarProps {
@@ -35,7 +35,7 @@ export const Bar: FC<BarProps> = ({
 
     return (
         <header className="header">
-            <div className="container searchContainer">
+            <div className="container search-container">
                 <SearchBar
                     placeholder={placeholder}
                     onSearch={onSearch}

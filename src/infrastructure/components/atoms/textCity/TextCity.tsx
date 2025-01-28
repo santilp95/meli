@@ -1,6 +1,7 @@
 "use client";
-
 import { FC } from "react";
+
+import './textCity.scss'
 
 interface TextCityProps {
     /**
@@ -15,10 +16,7 @@ interface TextCityProps {
 export const TextCity: FC<TextCityProps> = ({ text }) => {
     return (
         <p
-            style={{
-                fontSize: "12px",
-                color: "#999999",
-            }}
+            className="text-city"
         >
             {text}
         </p>

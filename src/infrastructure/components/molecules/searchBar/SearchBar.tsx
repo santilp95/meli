@@ -3,7 +3,7 @@ import { FC, useState } from "react";
 
 import { BarInput, IconProduct, ShortButton } from "../../atoms";
 
-import "./searchBar.css";
+import "./searchBar.scss";
 
 interface SearchBarProps {
     /**

@@ -1,0 +1,21 @@
+.search-bar {
+    flex: 0 1 90%;
+    max-width: 90%;
+    margin: 10px 60px;
+
+    img {
+        margin-right: 15px;
+    }
+
+    input {
+        padding: 5px;
+        height: 100%;
+    }
+
+    button {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

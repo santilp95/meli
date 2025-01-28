@@ -16,6 +16,6 @@ describe("TextStateProduct", () => {
     const { getByText } = render(<TextStateProduct text={text} />);
     const paragraph = getByText(text);
 
-    expect(paragraph).toHaveStyle("color: var(--foreground)");
+    expect(paragraph).toHaveStyle("color: var(--black)");
   });
 });

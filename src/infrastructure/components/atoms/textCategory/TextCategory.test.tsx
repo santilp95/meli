@@ -24,9 +24,6 @@ describe('TextCategory', () => {
   it('applies correct styles', () => {
     const { getByText } = render(<TextCategory text="Sample Text" />);
     const textElement = getByText('Sample Text');
-    expect(textElement).toHaveStyle('font-size: 14px');
-    expect(textElement).toHaveStyle('color: #999999');
-    expect(textElement).toHaveStyle('margin: 0');
-    expect(textElement).toHaveStyle('padding: 0');
+    expect(textElement).toHaveClass('text-category');
   });
 });

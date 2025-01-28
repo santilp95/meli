@@ -6,7 +6,7 @@ import { Bar } from "@/infrastructure/components";
 import { BreadCrumbProvider } from '@/adapters/shared/context/breadCrumb';
 
 import "./globals.css";
-import "./page.css";
+import "./page.scss";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

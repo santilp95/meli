@@ -1,6 +1,7 @@
 "use client";
 
 import { FC } from "react";
+import './textCategory.scss'
 
 interface TextCategoryProps {
     /**
@@ -22,12 +23,9 @@ export const TextCategory: FC<TextCategoryProps> = ({
 }) => {
     return (
         <p
+            className="text-category"
             style={{
-                fontSize: "14px",
-                color: "#999999",
                 fontWeight: isBold ? "bold" : "normal",
-                margin: 0,
-                padding: 0,
             }}
         >
             {text}

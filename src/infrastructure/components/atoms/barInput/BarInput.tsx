@@ -1,7 +1,7 @@
 "use client";
 import { ChangeEvent, FC, KeyboardEvent } from "react";
 
-import styles from "./barInput.module.css";
+import "./barInput.scss";
 
 interface BarInputProps {
   /**
@@ -33,7 +33,7 @@ export const BarInput: FC<BarInputProps> = ({
 }) => {
   return (
     <input
-      className={styles.barInput}
+      className="bar-input"
       onChange={onChange}
       onKeyDown={onKeyDown}
       placeholder={placeholder ?? "Nunca dejes de buscar"}
