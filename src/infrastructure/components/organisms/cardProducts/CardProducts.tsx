@@ -6,7 +6,7 @@ import { CardProduct } from "../../molecules";
 
 import "./cardProducts.scss";
 
-interface CardProductsProps {
+export interface CardProductsProps {
     /**
      * List of products
      */
